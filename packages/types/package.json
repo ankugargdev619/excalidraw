@@ -1,0 +1,8 @@
+{
+  "name": "@localtypes/types",
+  "version": "1.0.0",
+  "private": true,
+  "exports": {
+    "./types": "./index.d.ts"
+  }
+}

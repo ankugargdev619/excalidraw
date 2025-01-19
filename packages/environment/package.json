@@ -1,0 +1,11 @@
+{
+  "name": "@repo/environment",
+  "version": "1.0.0",
+  "private": true,
+  "exports": {
+    "./config": "./config.ts"
+  },
+  "dependencies": {
+    "@types/node": "^22.10.7"
+  }
+}
