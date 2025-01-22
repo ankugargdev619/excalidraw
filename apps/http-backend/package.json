@@ -8,17 +8,20 @@
     "dev": "tsc -b && node dist/index.js"
   },
   "dependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "bcrypt": "^5.1.1",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
     "zod": "^3.24.1"
   },
   "devDependencies": {
-    "@types/jsonwebtoken": "^9.0.7",
+    "@localtypes/types": "workspace:*",
+    "@repo/common": "workspace:*",
+    "@repo/db": "workspace:*",
+    "@repo/environment": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@localtypes/types":"workspace:*",
     "@types/express": "^5.0.0",
-    "@repo/environment" : "workspace:*",
-    "@repo/common" : "workspace:*"
+    "@types/jsonwebtoken": "^9.0.7"
   },
   "keywords": [],
   "author": "",
