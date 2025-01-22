@@ -79,7 +79,7 @@ app.post("/signin",async (req,res)=>{
         }
 
         const token = jwt.sign({
-            username : user?.email
+            userId : user?.id
         },JWT_SECRET)
 
         res.json({
@@ -120,7 +120,7 @@ app.post("/room",checkAuth,async (req,res)=>{
         })
         console.log(room);
         res.json({
-            room
+            id : room.id
         })
         return
     } catch(e){

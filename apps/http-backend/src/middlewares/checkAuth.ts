@@ -6,9 +6,8 @@ export function checkAuth(req : Request ,res : Response,next : NextFunction){
     try{
         const token = req.headers.authorization?.split(" ")[1] ?? "";
         const decoded = jwt.verify(token,JWT_SECRET) as JwtPayload;
-        console.log(decoded);
         if(decoded){
-            req.userId = decoded.username;
+            req.userId = decoded.userId;
             console.log("User is authenticated");
             next();
         } else {
