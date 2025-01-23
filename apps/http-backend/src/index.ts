@@ -97,7 +97,6 @@ app.post("/signin",async (req,res)=>{
 
 })
 
-
 app.post("/room",checkAuth,async (req,res)=>{
     const parsedData = CreateRoomSchema.safeParse(req.body);
     if(!parsedData.success){
@@ -109,7 +108,6 @@ app.post("/room",checkAuth,async (req,res)=>{
     }
 
     const userId = req.userId;
-    console.log(userId);
 
     try{        
         const room = await prismaClient.room.create({
@@ -130,7 +128,19 @@ app.post("/room",checkAuth,async (req,res)=>{
         })
         return
     }
+});
+
+app.get("/chats/:roomId", async (req,res)=>{
+    const roomId = Number(req.params.roomId);
+    const messages = await prismaClient.chat.findMany({
+        where:{
+            roomId : roomId
+        }
+    })
+    res.json({
+        messages
+    })
+    return;
 })
 
 app.listen(3001);
-

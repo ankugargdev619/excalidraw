@@ -107,6 +107,9 @@ importers:
       '@localtypes/types':
         specifier: workspace:*
         version: link:../../packages/types
+      '@repo/db':
+        specifier: workspace:*
+        version: link:../../packages/db
       '@repo/environment':
         specifier: workspace:*
         version: link:../../packages/environment

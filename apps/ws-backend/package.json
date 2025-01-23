@@ -16,7 +16,8 @@
     "@localtypes/types": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@types/ws": "^8.5.13",
-    "@repo/environment" : "workspace:*"
+    "@repo/environment" : "workspace:*",
+    "@repo/db" : "workspace:*"
   },
   "keywords": [],
   "author": "",
