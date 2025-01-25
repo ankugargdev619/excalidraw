@@ -32,7 +32,7 @@ export default function Home() {
           priority
         />
         <ol>
-          <li>
+          <li className="text-bold text-2xl text-blue-500">
             Get started by editing <code>apps/web/app/page.tsx</code>
           </li>
           <li>Save and see your changes instantly.</li>
